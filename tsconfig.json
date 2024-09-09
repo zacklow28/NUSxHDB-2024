@@ -22,5 +22,13 @@
   },
   "include": [
     "src"
-  ]
+  ],
+  "exclude": [
+    ".vscode",
+    "node_modules",
+    "**/.git",
+    "types",
+    "dist",
+    "tmp",
+  ],
 }

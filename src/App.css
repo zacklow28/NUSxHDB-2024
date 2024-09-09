@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+:root {
+  --primary-bg: #EB5E55 !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-page {
+  padding: 0 10px 30px 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-bottom: 2rem;
+  padding-top: 5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.login-signin-txt {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-wrap: nowrap; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.login-sub-txt {
+  font-size: 0.875rem;
+  color: #908E8E;
+}
+
+.login-input-container {
+  max-width: 26.25rem;
+  margin: 0 auto
+}
+
+.link {
+  color: var(--primary-bg) !important;
+  text-decoration: none !important;
+}
+
+.font-small {
+  font-size: 0.875rem !important;;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.login-svg {
+  position: absolute;
+  right: 0;
+}
+
+/* MUI Overrides */
+.MuiButton-root {
+  font-size: 0.875rem !important;
+  text-transform: none !important;
+  border-radius: 10px !important;
+}
+
+.MuiButton-outlined {
+  color: #908e8e !important;
+  border-color: #EEEEEE !important
+}
+
+.MuiButton-sizeLarge {
+  height: 54px !important;
+}
+
+.MuiInputBase-root {
+  border-radius: 10px !important;
+}
+
+@media screen and (max-width: 400px) {
+  .login-signin-txt {
+    font-size: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 768px) {
+  .login-svg {
+    display: none;
+  }
+}
+
+@media (orientation: portrait) {
+  .login-svg {
+    display: none;
   }
 }
