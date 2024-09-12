@@ -4,22 +4,24 @@ import './MyButton.css';
 
 type MyButtonProps = {
   children: ReactNode;
-  fullwidth?: boolean;
+  fullWidth?: boolean;
   variant?: 'outlined' | 'contained' | 'text';
+  size?: 'small' | 'medium' | 'large';
   startIcon?: ReactNode;
 };
-
+/* template code for buttons. Can define variant, full width, size, and icon */
 const MyButton = ({
   children,
-  fullwidth,
-  variant = 'contained',
+  fullWidth,
+  variant,
+  size,
   startIcon,
 }: MyButtonProps) => {
   return (
     <Button
       variant={variant}
-      fullWidth={fullwidth}
-      size='large'
+      fullWidth={fullWidth}
+      size={size}
       startIcon={startIcon}
     >
       {children}
